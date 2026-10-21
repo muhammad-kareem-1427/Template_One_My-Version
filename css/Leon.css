@@ -1,0 +1,435 @@
+/* Start Variables */
+:root {
+    --main-color: skyblue;
+    --secondary-color: yellow;
+    --BG-color: honeydew;
+}
+
+
+/* End Variables */
+
+/* Start Global Rules */
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+html::selection {
+    color: yellow;
+    background-color: skyblue;
+}
+
+body {
+    font-family: "Work Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+.container {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Small Devices */
+
+@media (min-width : 768px) {
+    .container {
+        width: 750px;
+    }
+}
+
+/* Medium Devices */
+
+@media (min-width: 992px) {
+    .container {
+        width: 970px;
+    }
+}
+
+/* Large Devices */
+
+@media (min-width: 1200px) {
+    .container {
+        width: 1170px;
+    }
+}
+
+/* End Global Rules */
+
+
+/* Start Components */
+
+.main-heading {
+    text-align: center;
+}
+
+.main-heading>h2 {
+    color: var(--secondary-color);
+    opacity: 0.4;
+    font-size: 120px;
+    margin: 0;
+}
+
+.main-heading>h2+p {
+    margin: 0;
+    transform: translateY(-33px);
+    letter-spacing: -1.1px;
+    opacity: 0.4;
+    font-size: 24px;
+}
+
+@media (Max-width : 768px) {
+    .main-heading>h2 {
+        font-size: 74px;
+    }
+
+    .main-heading>h2+p {
+        font-size: 21px;
+        transform: translateY(-24px);
+    }
+}
+
+@media (max-width : 350px) {
+    .main-heading>h2 {
+        font-size: 68px;
+    }
+
+    .main-heading>h2+p {
+        font-size: 18px;
+    }
+}
+
+/* End Components */
+
+
+/* Start Header  */
+
+header {
+    padding: 5px;
+}
+
+header .container .header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+
+header .container .header-content img {
+    border-bottom-left-radius: 36%;
+    border-top-right-radius: 36%;
+    width: 110px;
+    height: 90px;
+    padding: 5px;
+}
+
+header .container .header-content .links {
+    position: relative;
+}
+
+header .container .header-content ul {
+    background-color: var(--main-color);
+    position: absolute;
+    top: 30px;
+    right: 0;
+    padding: 0;
+    margin: 0;
+    border-top-left-radius: 10%;
+    border-bottom-Right-radius: 10%;
+    display: none;
+}
+
+header .container .header-content ul li {
+    list-style: none;
+    color: white;
+    padding: 12px 42px;
+    font-size: 24px;
+    text-align: center;
+}
+
+header .container .header-content ul li:not(:last-child) {
+    border-bottom: 5px solid yellow;
+}
+
+header .container .header-content ul li a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    transition: all 0.5s ease 0s;
+}
+
+header .container .header-content ul li:hover a {
+    transform: scale(1.2);
+    color: yellow;
+}
+
+header .container .header-content ul::after {
+    content: "";
+    position: absolute;
+    top: -20px;
+    right: 0;
+    border: 10px solid;
+    border-color: transparent transparent yellow transparent;
+}
+
+header .container .header-content .menu span {
+    height: 2px;
+    width: 30px;
+    background-color: var(--main-color);
+    margin-bottom: 4px;
+    display: block;
+}
+
+header .container .header-content span:not(:first-child, :last-child) {
+    width: 15px;
+    margin-left: 50%;
+    transition: all 0.5s ease 0s;
+}
+
+header .container .header-content .links:hover ul {
+    display: block;
+}
+
+header .container .header-content .links:hover span:not(:first-child, :last-child) {
+    width: 100%;
+    margin-left: 0;
+}
+
+/* End Header  */
+
+/* Start Landing */
+.landing {
+    min-height: calc(100vh - 64px);
+    background-image: url(../Images/wojciech-wyszkowski-M6PMx-ti25E-unsplash.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* .landing div {
+    perspective: 400px;
+    width: 200px;
+    margin: auto;
+} */
+
+.landing h2 {
+    margin: 0 auto 0;
+    font-size: 100px;
+    text-align: center;
+    padding-top: 200px;
+    color: yellow;
+    text-shadow: 5px 5px 10px deepskyblue, 10px 10px 10px aliceblue;
+    /* transform: rotate3d(10, -150, -10, 50deg); */
+}
+
+
+/* End Landing */
+
+/* Start Fetures */
+
+@media (min-width : 675px) and (max-width : 1199px) {
+
+    .features-description:last-child {
+        width: calc(100%*2);
+    }
+}
+
+.features {
+    padding-top: 60px;
+    padding-Bottom: 60px;
+    background-color: var(--BG-color);
+}
+
+.features-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.features-description {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: wrap column;
+}
+
+.features .features-content .features-description>p {
+    text-align: center;
+    line-height: 1.6;
+    opacity: 0.4;
+}
+
+.features .features-content .features-description>i {
+    color: var(--main-color);
+}
+
+/* End Fetures */
+
+/* Start Services */
+
+.services {
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+.services .services-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 60px;
+    margin-bottom: 60px;
+}
+
+.services .services-content .ser-text-col1>div,
+.services .services-content .ser-text-col2>div {
+    height: 180px;
+    display: flex;
+}
+
+.services .services-content .ser-text-col1>div i,
+.services .services-content .ser-text-col2>div i {
+    color: yellow;
+    flex-basis: 55px;
+}
+
+
+.services .services-content .ser-text-col1>div .ser-text,
+.services .services-content .ser-text-col2>div .ser-text {
+    flex: 1;
+}
+
+.services .services-content .ser-text-col1>div .ser-text h2,
+.services .services-content .ser-text-col2>div .ser-text h2 {
+    margin: 0;
+}
+
+.services .services-content .ser-text-col1>div .ser-text p,
+.services .services-content .ser-text-col2>div .ser-text p {
+    line-height: 1.6;
+    opacity: 0.4;
+}
+
+.services .services-content .ser-text-col1>div:last-child,
+.services .services-content .ser-text-col2>div:last-child {
+    margin-top: 50px;
+}
+
+
+.services .services-content .ser-image {
+    position: relative;
+    width: 300px;
+    height: 300px;
+}
+
+.services .services-content .ser-image img {
+    width: 100%;
+}
+
+.services .services-content .ser-image::before {
+    content: "";
+    right: -50px;
+    top: -50px;
+    width: 100px;
+    height: calc(300px + 100px);
+    position: absolute;
+    background-color: var(--main-color);
+    z-index: -1;
+}
+
+
+@media (min-width : 675px) and (max-width : 1199px) {
+
+    .services .services-content .ser-image {
+        width: calc(100%*2);
+        display: flex;
+        justify-content: center;
+    }
+
+
+    .services .services-content .ser-image img {
+        width: 300px;
+    }
+
+}
+
+@media (Max-width : 1199px) {
+    .services .services-content .ser-image::before {
+        display: none;
+    }
+}
+
+/* End Services */
+
+/* Start Portfolio  */
+
+.portfolio {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    background-color: var(--BG-color);
+}
+
+.portfolio .portfolio-content {
+    margin-top: 60px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-flow: wrap row;
+}
+
+.portfolio .portfolio-content .port-card {
+    margin: 20px;
+    background: white;
+    width: 325px;
+    box-shadow: 0px 0px 5px 0px;
+    transition: all 0.5s ease 0.1s;
+}
+
+.portfolio .portfolio-content .port-card:hover {
+    transform: translateY(-10px) scale(1.05)
+}
+
+
+.portfolio .portfolio-content .port-card img {
+    width: 100%;
+}
+
+.portfolio .portfolio-content .port-card .port-card-text {
+    padding: 20px;
+}
+
+.portfolio .portfolio-content .port-card .port-card-text h3 {
+    align-items: flex-start;
+    width: 100%;
+    margin-top: 0;
+}
+
+.portfolio .portfolio-content .port-card .port-card-text p {
+    line-height: 1.6;
+    opacity: 0.4;
+}
+
+
+@media (max-width :1199px) {
+    .portfolio .portfolio-content .port-card {
+        width: 375px;
+    }
+}
+
+@media (max-width :991px) {
+    .portfolio .portfolio-content .port-card {
+        width: 320px;
+    }
+}
+
+@media (max-width :767px) {
+    .portfolio .portfolio-content .port-card {
+        width: 450px;
+    }
+}
+
+
+
+/* End Portfolio  */
