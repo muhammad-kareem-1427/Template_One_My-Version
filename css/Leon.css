@@ -1,8 +1,10 @@
 /* Start Variables */
 :root {
-    --main-color: skyblue;
-    --secondary-color: yellow;
-    --BG-color: honeydew;
+    --main-color: yellow;
+    --secondary-color: deepskyblue;
+    --BG-color: mintcream;
+    /* Oldlace, aliceblue ,mintcream,floralwhite,honeydew,ivory,lightyellow,linen,
+    mintcream,midnightblue,snow,whitesmoke,azure*/
 }
 
 
@@ -14,11 +16,13 @@
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 html::selection {
-    color: yellow;
-    background-color: skyblue;
+    color: var(--main-color);
+    background-color: var(--secondary-color);
+    caret-color: yellow;
 }
 
 body {
@@ -69,16 +73,16 @@ body {
 
 .main-heading>h2 {
     color: var(--secondary-color);
-    opacity: 0.4;
     font-size: 120px;
     margin: 0;
+    opacity: 0.6;
 }
 
 .main-heading>h2+p {
     margin: 0;
     transform: translateY(-33px);
     letter-spacing: -1.1px;
-    opacity: 0.4;
+    opacity: 0.6;
     font-size: 24px;
 }
 
@@ -132,7 +136,7 @@ header .container .header-content .links {
 }
 
 header .container .header-content ul {
-    background-color: var(--main-color);
+    background-color: var(--secondary-color);
     position: absolute;
     top: 30px;
     right: 0;
@@ -152,7 +156,7 @@ header .container .header-content ul li {
 }
 
 header .container .header-content ul li:not(:last-child) {
-    border-bottom: 5px solid yellow;
+    border-bottom: 5px solid var(--main-color);
 }
 
 header .container .header-content ul li a {
@@ -164,7 +168,7 @@ header .container .header-content ul li a {
 
 header .container .header-content ul li:hover a {
     transform: scale(1.2);
-    color: yellow;
+    color: var(--main-color);
 }
 
 header .container .header-content ul::after {
@@ -173,13 +177,13 @@ header .container .header-content ul::after {
     top: -20px;
     right: 0;
     border: 10px solid;
-    border-color: transparent transparent yellow transparent;
+    border-color: transparent transparent var(--secondary-color) transparent;
 }
 
 header .container .header-content .menu span {
     height: 2px;
     width: 30px;
-    background-color: var(--main-color);
+    background-color: var(--secondary-color);
     margin-bottom: 4px;
     display: block;
 }
@@ -204,7 +208,7 @@ header .container .header-content .links:hover span:not(:first-child, :last-chil
 /* Start Landing */
 .landing {
     min-height: calc(100vh - 64px);
-    background-image: url(../Images/wojciech-wyszkowski-M6PMx-ti25E-unsplash.jpg);
+    background-image: url(../Images/pexels-arina-dmitrieva-66352626-11506984.jpg);
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -220,8 +224,8 @@ header .container .header-content .links:hover span:not(:first-child, :last-chil
     font-size: 100px;
     text-align: center;
     padding-top: 200px;
-    color: yellow;
-    text-shadow: 5px 5px 10px deepskyblue, 10px 10px 10px aliceblue;
+    color: var(--main-color);
+    text-shadow: 3px 3px 10px white, 6px 6px 10px black;
     /* transform: rotate3d(10, -150, -10, 50deg); */
 }
 
@@ -259,7 +263,7 @@ header .container .header-content .links:hover span:not(:first-child, :last-chil
 .features .features-content .features-description>p {
     text-align: center;
     line-height: 1.6;
-    opacity: 0.4;
+    opacity: 0.6;
 }
 
 .features .features-content .features-description>i {
@@ -291,7 +295,7 @@ header .container .header-content .links:hover span:not(:first-child, :last-chil
 
 .services .services-content .ser-text-col1>div i,
 .services .services-content .ser-text-col2>div i {
-    color: yellow;
+    color: var(--main-color);
     flex-basis: 55px;
 }
 
@@ -309,7 +313,7 @@ header .container .header-content .links:hover span:not(:first-child, :last-chil
 .services .services-content .ser-text-col1>div .ser-text p,
 .services .services-content .ser-text-col2>div .ser-text p {
     line-height: 1.6;
-    opacity: 0.4;
+    opacity: 0.6;
 }
 
 .services .services-content .ser-text-col1>div:last-child,
@@ -322,6 +326,7 @@ header .container .header-content .links:hover span:not(:first-child, :last-chil
     position: relative;
     width: 300px;
     height: 300px;
+    margin: 0 auto;
 }
 
 .services .services-content .ser-image img {
@@ -335,7 +340,7 @@ header .container .header-content .links:hover span:not(:first-child, :last-chil
     width: 100px;
     height: calc(300px + 100px);
     position: absolute;
-    background-color: var(--main-color);
+    background-color: var(--secondary-color);
     z-index: -1;
 }
 
@@ -408,7 +413,7 @@ header .container .header-content .links:hover span:not(:first-child, :last-chil
 
 .portfolio .portfolio-content .port-card .port-card-text p {
     line-height: 1.6;
-    opacity: 0.4;
+    opacity: 0.6;
 }
 
 
@@ -433,3 +438,236 @@ header .container .header-content .links:hover span:not(:first-child, :last-chil
 
 
 /* End Portfolio  */
+
+/* Start About  */
+.about {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    margin-bottom: 60px;
+}
+
+.about .about-content {
+    margin-top: 70px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.about .about-content .about-image {
+    width: 300px;
+    height: 400px;
+    position: relative;
+    margin-right: 50px;
+}
+
+.about .about-content .about-image img {
+    width: 100%;
+    height: 100%;
+    /* filter: grayscale(100%); */
+    /* transition: all 1s ease 0.1s; */
+}
+
+/* .about .about-content .about-image img:hover {
+    filter: grayscale(0%);
+} */
+
+.about .about-content .about-image::before {
+    content: "";
+    position: absolute;
+    top: -40px;
+    left: -50px;
+    width: 100px;
+    background-color: var(--secondary-color);
+    height: calc(100% + 80px);
+    z-index: -1;
+}
+
+.about .about-content .about-image::after {
+    content: "";
+    position: absolute;
+    top: -40px;
+    right: -160px;
+    width: 130px;
+    height: calc((80% + 80px) - 80px);
+    border-bottom: 80px solid var(--main-color);
+    border-left: 80px solid var(--main-color);
+    z-index: -1;
+}
+
+.about .about-content .about-text {
+    width: 350px;
+    text-align: left;
+    margin-left: 50px;
+}
+
+.about .about-content .about-text>p {
+    line-height: 1.6;
+    padding: 40px 0px;
+    margin: 0;
+}
+
+.about .about-content .about-text>p:first-of-type {
+    font-weight: bold;
+}
+
+.about .about-content .about-text hr {
+    width: 50%;
+    margin-right: 50%;
+    border-width: 3px;
+    border: 2px inset var(--main-color);
+}
+
+.about .about-content .about-text>p:last-of-type {
+    opacity: 0.6;
+}
+
+
+@media (max-width: 992px) {
+    .about .about-content {
+        justify-content: center;
+        align-items: center;
+        flex-flow: wrap row;
+    }
+
+    .about .about-content .about-image {
+        margin: 0;
+    }
+
+    .about .about-content .about-image::before,
+    .about .about-content .about-image::after {
+        display: none;
+    }
+
+    .about .about-content .about-image img {
+        border: 5px solid lightblue;
+    }
+
+    .about .about-content .about-text {
+        margin: 0;
+        width: initial;
+    }
+}
+
+/* End About  */
+
+/* Start Contact */
+
+.contact {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    background-color: var(--BG-color);
+}
+
+.contact .contact-content {
+    margin: 60px 0;
+}
+
+.contact .contact-content .contact-content-email {
+    display: flex;
+    align-items: center;
+    flex-flow: column;
+    font-size: 42px;
+}
+
+.contact .contact-content .contact-content-email>h2 {
+    font-size: inherit;
+    color: var(--secondary-color);
+    letter-spacing: -1.5px;
+    margin: 20px 0;
+    word-spacing: -2px;
+}
+
+.contact .contact-content .contact-content-email>a {
+    text-decoration: none;
+    color: var(--main-color);
+    font-weight: bold;
+}
+
+.contact .contact-content .contact-content-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding-top: 40px;
+}
+
+.contact .contact-content .contact-content-links>p {
+    margin: 0 15px 0 0;
+}
+
+.contact .contact-content .contact-content-links .contact-content-links-icons a {
+    text-decoration: none;
+    color: initial;
+    margin-left: 10px;
+    transition: all 0.5s ease 0.1s;
+}
+
+.contact .contact-content .contact-content-links .contact-content-links-icons a:first-child:hover {
+    color: red;
+}
+
+.contact .contact-content .contact-content-links .contact-content-links-icons a:not(:first-child, :last-child):hover {
+    color: lawngreen;
+}
+
+.contact .contact-content .contact-content-links .contact-content-links-icons a:last-child:hover {
+    color: deepskyblue;
+}
+
+@media (Max-width : 768px) {
+    .contact .contact-content .contact-content-email {
+        font-size: 32px;
+    }
+}
+
+@media (max-width : 450px) {
+    .contact .contact-content .contact-content-email {
+        font-size: 26px;
+    }
+}
+
+@media (max-width : 350px) {
+    .contact .contact-content .contact-content-email {
+        font-size: 24px;
+    }
+}
+
+
+
+@media (max-width : 410px) {
+    .contact .contact-content .contact-content-links .contact-content-links-icons {
+        margin-top: 10px;
+    }
+}
+
+/* End Contact */
+
+/* Start Footer */
+
+footer {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    background-color: var(--secondary-color);
+}
+
+footer p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+footer p span {
+    font-weight: bold;
+    color: var(--main-color);
+    margin: 0 5px;
+}
+
+
+@media (max-width: 340px) {
+    footer p {
+        font-size: 15px;
+    }
+}
+
+/* End Footer */
