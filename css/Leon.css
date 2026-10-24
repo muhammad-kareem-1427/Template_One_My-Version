@@ -3,6 +3,12 @@
     --main-color: yellow;
     --secondary-color: deepskyblue;
     --BG-color: mintcream;
+    --main-opacity: 0.6;
+    --main-padding: 60px;
+    --main-margin: 60px;
+
+
+
     /* Oldlace, aliceblue ,mintcream,floralwhite,honeydew,ivory,lightyellow,linen,
     mintcream,midnightblue,snow,whitesmoke,azure*/
 }
@@ -75,14 +81,14 @@ body {
     color: var(--secondary-color);
     font-size: 120px;
     margin: 0;
-    opacity: 0.6;
+    opacity: var(--main-opacity);
 }
 
 .main-heading>h2+p {
     margin: 0;
     transform: translateY(-33px);
     letter-spacing: -1.1px;
-    opacity: 0.6;
+    opacity: var(--main-opacity);
     font-size: 24px;
 }
 
@@ -117,9 +123,6 @@ header {
 }
 
 header .container .header-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     margin-top: 10px;
 }
 
@@ -149,7 +152,6 @@ header .container .header-content ul {
 
 header .container .header-content ul li {
     list-style: none;
-    color: white;
     padding: 12px 42px;
     font-size: 24px;
     text-align: center;
@@ -220,7 +222,7 @@ header .container .header-content .links:hover span:not(:first-child, :last-chil
 } */
 
 .landing h2 {
-    margin: 0 auto 0;
+    margin: 0 auto;
     font-size: 100px;
     text-align: center;
     padding-top: 200px;
@@ -242,28 +244,19 @@ header .container .header-content .links:hover span:not(:first-child, :last-chil
 }
 
 .features {
-    padding-top: 60px;
-    padding-Bottom: 60px;
+    padding-top: var(--main-padding);
+    padding-Bottom: var(--main-padding);
     background-color: var(--BG-color);
 }
 
-.features-content {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 30px;
-}
-
 .features-description {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     flex-flow: wrap column;
 }
 
 .features .features-content .features-description>p {
     text-align: center;
     line-height: 1.6;
-    opacity: 0.6;
+    opacity: var(--main-opacity);
 }
 
 .features .features-content .features-description>i {
@@ -275,16 +268,13 @@ header .container .header-content .links:hover span:not(:first-child, :last-chil
 /* Start Services */
 
 .services {
-    padding-top: 60px;
-    padding-bottom: 60px;
+    padding-top: var(--main-padding);
+    padding-bottom: var(--main-padding);
 }
 
 .services .services-content {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 30px;
-    margin-top: 60px;
-    margin-bottom: 60px;
+    margin-top: var(--main-margin);
+    margin-bottom: var(--main-margin);
 }
 
 .services .services-content .ser-text-col1>div,
@@ -313,7 +303,7 @@ header .container .header-content .links:hover span:not(:first-child, :last-chil
 .services .services-content .ser-text-col1>div .ser-text p,
 .services .services-content .ser-text-col2>div .ser-text p {
     line-height: 1.6;
-    opacity: 0.6;
+    opacity: var(--main-opacity);
 }
 
 .services .services-content .ser-text-col1>div:last-child,
@@ -371,16 +361,13 @@ header .container .header-content .links:hover span:not(:first-child, :last-chil
 /* Start Portfolio  */
 
 .portfolio {
-    padding-top: 60px;
-    padding-bottom: 60px;
+    padding-top: var(--main-padding);
+    padding-bottom: var(--main-padding);
     background-color: var(--BG-color);
 }
 
 .portfolio .portfolio-content {
-    margin-top: 60px;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
+    margin-top: var(--main-margin);
     flex-flow: wrap row;
 }
 
@@ -393,13 +380,19 @@ header .container .header-content .links:hover span:not(:first-child, :last-chil
 }
 
 .portfolio .portfolio-content .port-card:hover {
-    transform: translateY(-10px) scale(1.05)
+    transform: translateY(-10px) scale(1.05);
 }
 
 
 .portfolio .portfolio-content .port-card img {
     width: 100%;
+    transition: all 0.5s ease 0.1s;
 }
+
+.portfolio-content:has(.port-card:hover) .port-card:not(:hover) {
+    filter: blur(3px);
+}
+
 
 .portfolio .portfolio-content .port-card .port-card-text {
     padding: 20px;
@@ -413,7 +406,7 @@ header .container .header-content .links:hover span:not(:first-child, :last-chil
 
 .portfolio .portfolio-content .port-card .port-card-text p {
     line-height: 1.6;
-    opacity: 0.6;
+    opacity: var(--main-opacity);
 }
 
 
@@ -441,16 +434,13 @@ header .container .header-content .links:hover span:not(:first-child, :last-chil
 
 /* Start About  */
 .about {
-    padding-top: 60px;
-    padding-bottom: 60px;
-    margin-bottom: 60px;
+    padding-top: var(--main-padding);
+    padding-bottom: var(--main-padding);
+    margin-bottom: var(--main-margin);
 }
 
 .about .about-content {
     margin-top: 70px;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
 }
 
 .about .about-content .about-image {
@@ -463,13 +453,8 @@ header .container .header-content .links:hover span:not(:first-child, :last-chil
 .about .about-content .about-image img {
     width: 100%;
     height: 100%;
-    /* filter: grayscale(100%); */
-    /* transition: all 1s ease 0.1s; */
 }
 
-/* .about .about-content .about-image img:hover {
-    filter: grayscale(0%);
-} */
 
 .about .about-content .about-image::before {
     content: "";
@@ -518,7 +503,7 @@ header .container .header-content .links:hover span:not(:first-child, :last-chil
 }
 
 .about .about-content .about-text>p:last-of-type {
-    opacity: 0.6;
+    opacity: var(--main-opacity);
 }
 
 
@@ -553,18 +538,16 @@ header .container .header-content .links:hover span:not(:first-child, :last-chil
 /* Start Contact */
 
 .contact {
-    padding-top: 60px;
-    padding-bottom: 60px;
+    padding-top: var(--main-padding);
+    padding-bottom: var(--main-padding);
     background-color: var(--BG-color);
 }
 
 .contact .contact-content {
-    margin: 60px 0;
+    margin: var(--main-margin) 0;
 }
 
 .contact .contact-content .contact-content-email {
-    display: flex;
-    align-items: center;
     flex-flow: column;
     font-size: 42px;
 }
@@ -584,9 +567,6 @@ header .container .header-content .links:hover span:not(:first-child, :last-chil
 }
 
 .contact .contact-content .contact-content-links {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     flex-wrap: wrap;
     padding-top: 40px;
 }
@@ -651,9 +631,7 @@ footer {
 }
 
 footer p {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    text-align: center;
     color: white;
 }
 
@@ -662,7 +640,6 @@ footer p span {
     color: var(--main-color);
     margin: 0 5px;
 }
-
 
 @media (max-width: 340px) {
     footer p {

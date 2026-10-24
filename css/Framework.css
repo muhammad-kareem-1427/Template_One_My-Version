@@ -1,0 +1,29 @@
+.flex-center-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex-Saround-center {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.flex-Sbetween-center {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.flex-Sevenly-center {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.main-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+}
