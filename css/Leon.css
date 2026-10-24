@@ -123,15 +123,19 @@ header {
 }
 
 header .container .header-content {
-    margin-top: 10px;
+    margin-top: 15px;
+    margin-bottom: 15px;
 }
 
 header .container .header-content img {
-    border-bottom-left-radius: 36%;
-    border-top-right-radius: 36%;
-    width: 110px;
-    height: 90px;
+    border-top-Right-radius: 50%;
+    border-bottom-left-radius: 50%;
+    width: 100px;
+    height: 100px;
     padding: 5px;
+    border: 2px double var(--secondary-color);
+    outline: 3px lightblue;
+    outline-style: outset;
 }
 
 header .container .header-content .links {
